@@ -12,7 +12,7 @@ import { env } from "@/env";
 
 import { routing } from "@/i18n/routing";
 
-import { Header } from "@/components/layouts/header/Header";
+import  Header  from "@/components/layouts/header/Header";
 import { Toaster } from "@/ui";
 import { Providers } from "@/providers";
 
@@ -80,7 +80,7 @@ export default async function RootLayout({
         <Providers messages={pick(messages, 'common', 'ui', 'error')} locale={locale}>
           <Header />
           <main className="flex-1">
-            <Suspense>{children}</Suspense>
+            {children}
           </main>
           <Toaster richColors />
         </Providers>

@@ -7,5 +7,5 @@ export default function RevalidatorButton({ tag = "test" }: { tag?: string }) {
 }
 
 export function UpdateButton({ tag = "test" }: { tag?: string }) {
-  return <button onClick={() => updateCustomTag(tag)}>Update</button>;
+  return <button onClick={() => updateCustomTag(tag)}>Update {tag}</button>;
 }

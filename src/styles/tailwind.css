@@ -4,6 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* --- Override Base Shadcn Colors --- */
+  --color-primary: #1F3A5F; 
+  --color-primary-foreground: #FFFFFF; 
+  
+  --color-secondary: #D5AF34; 
+  --color-secondary-foreground: #1F3A5F; 
+
+  /*  */
+--background-image-gold-fade: linear-gradient(270deg, rgba(240, 200, 84, 0.2) 0%, rgba(240, 200, 84, 0.04) 99.11%);
+  /* --- Remaining Shadcn Default Variables --- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -29,10 +39,9 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
+  
+  /* I REMOVED THE DUPLICATE PRIMARY/SECONDARY VARS FROM HERE */
+
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -41,6 +50,24 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* --- Your Custom Palette Shades --- */
+  --color-primary-lighter: #ECF1F9;
+  --color-primary-light: #8696AC;
+  --color-primary-main: #1F3A5F;
+  --color-primary-dark: #132339;
+  --color-primary-darker: #060C13;
+
+  --color-secondary-lighter: #FBF7EA;
+  --color-secondary-main: #D5AF34; /* Note: I left your updated #D5AF34 here */
+  --color-secondary-dark: #9B7F22;
+  --color-secondary-darker: #69530A;
+
+  --color-info-lighter: #CAFDF5;
+  --color-info-light: #61F3F3;
+  --color-info-main: #00B8D9;
+  --color-info-dark: #006C9C;
+  --color-info-darker: #003768;
 }
 
 :root {
@@ -113,6 +140,32 @@
 }
 
 @layer base {
+
+   h1 {
+    @apply text-[40px] leading-[50px] font-extrabold 
+           md:text-[64px] md:leading-[80px];
+  }
+
+  h2 {
+    @apply text-[20px] leading-[42px] font-bold 
+           md:text-[32px] md:leading-[64px];
+  }
+
+  h3 {
+    @apply text-lg leading-[36px] font-bold 
+           md:text-[24px] md:leading-[48px];
+  }
+
+  h4 {
+    @apply text-[20px] leading-[30px] font-bold 
+           md:text-[24px] md:leading-[36px];
+  }
+
+    p {
+    @apply font-normal  leading-[30px] tracking-normal align-middle;
+  }
+
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -126,3 +179,4 @@
     @apply mx-auto px-4;
   }
 }
+

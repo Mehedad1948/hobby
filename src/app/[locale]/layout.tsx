@@ -12,7 +12,7 @@ import { env } from "@/env";
 
 import { routing } from "@/i18n/routing";
 
-import  Header  from "@/components/layouts/header/Header";
+import Header from "@/components/layouts/header/Header";
 import { Toaster } from "@/ui";
 import { Providers } from "@/providers";
 
@@ -27,6 +27,7 @@ import { ModalProvider } from "@/providers/modal-provider";
 import { DemoModal } from "@/components/modals/demo-modal";
 import GlobalLoader from "@/components/ui/loading-indicator";
 import { pick } from "@/lib/helpers";
+import Footer from "@/components/layouts/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,6 +83,7 @@ export default async function RootLayout({
           <main className="flex-1">
             {children}
           </main>
+          <Footer />
           <Toaster richColors />
         </Providers>
 

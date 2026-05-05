@@ -9,6 +9,10 @@ import { BackingTransparencySection } from "./sections/BackingTransparency";
 import Landing from "./sections/Landing";
 import FeatureSlider from "./sections/FeatureSlider";
 import Compliance from "./sections/Compliance";
+import Allocation from "./sections/Allocation";
+import MoreAboutSection from "./sections/MoreAbout";
+import CompanyIntroduction from "./sections/CompanyIntroduction";
+import FAQSection from "./sections/FAQ";
 
 const slides = [
   <div key="1" className="w-full h-full flex flex-col items-center justify-center p-12 bg-gradient-to-br from-blue-50 to-white">
@@ -42,7 +46,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
 
   return (
-    <section className="flex flex-col items-center justify-center pb-40">
+    <section className="flex flex-col items-center justify-center ">
       <Landing />
 
       <Advantages />
@@ -52,6 +56,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* <FeatureSlider slides={slides} /> */}
 
       <Compliance />
+
+      <Allocation />
+
+      <MoreAboutSection />
+
+      <CompanyIntroduction />
+
+      <FAQSection />
     </section>
   );
 }

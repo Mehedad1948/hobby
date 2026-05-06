@@ -1,8 +1,11 @@
+"use client";
+
 import { CustomSvgLine } from "@/components/ui/CustomSvgLine";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { GoldenTag } from "@/components/ui/golden-tag";
 import { imageUrlHandler } from "@/lib/helpers/image-url-handler";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Advantages() {
     return (
@@ -29,24 +32,36 @@ export default function Advantages() {
 
                     {/* Left Features */}
                     <div className="flex flex-col space-y-8 lg:space-y-32 order-2 lg:order-1 z-10">
-                        {/* Feature 1 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                        {/* Feature 1 (Upper Left) - Bottom to Top */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                        >
                              <CustomSvgLine width={150} height={40}
                               className="absolute translate-y-1 top-full -scale-x-100 -scale-y-100 left-3/4 lg:block hidden" /> 
                             <h4 className="text-white mb-2">Currency conversion</h4>
                             <p className=" text-base leading-relaxed">
                                 Exportable reports for tax and accounting purposes.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        {/* Feature 2 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                        {/* Feature 2 (Bottom Left) - Top to Bottom */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                        >
                              <CustomSvgLine height={70}  className="absolute -translate-y-1 -scale-x-100 bottom-full left-1/2  lg:block hidden"  /> 
                             <h4 className="text-white mb-2">Data encryption</h4>
                             <p className=" text-base leading-relaxed">
                                 Visual dashboards for trade performance.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Center Graphic */}
@@ -69,25 +84,37 @@ export default function Advantages() {
 
                     {/* Right Features */}
                     <div className="flex flex-col space-y-8 lg:space-y-32 order-3 z-10">
-                        {/* Feature 3 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                        {/* Feature 3 (Upper Right) - Bottom to Top */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                        >
                              <CustomSvgLine width={150}
                               className="absolute translate-y-1 top-full -scale-y-100 right-3/4 lg:block hidden" /> 
                             <h4 className="text-white mb-2">Cold wallet storage</h4>
                             <p className=" text-base leading-relaxed">
                                 Regular updates on crypto trends and platform features.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        {/* Feature 4 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                        {/* Feature 4 (Bottom Right) - Top to Bottom */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                        >
                            <CustomSvgLine  className="absolute -translate-y-1  bottom-full right-1/2  lg:block hidden"  /> 
 
                             <h4 className="text-white mb-2">Transfer crypto & data</h4>
                             <p className=" text-base leading-relaxed">
                                 Guides for beginners on crypto basics and trading.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                 </div>

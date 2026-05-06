@@ -1,7 +1,10 @@
+"use client";
+
 import { GoldenTag } from '@/components/ui/golden-tag';
 import { imageUrlHandler } from '@/lib/helpers/image-url-handler';
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export function BackingTransparencySection() {
   const features = [
@@ -50,7 +53,14 @@ export function BackingTransparencySection() {
         {/* lg:divide-x creates the vertical lines between items on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 lg:gap-y-0 lg:divide-x divide-secondary-main/20">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center px-6">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+              className="flex flex-col items-center text-center px-6"
+            >
 
               {/* Icon Container - Pale yellow background */}
               <div className="aspect-square p-4 rounded-full bg-[#fcf9f2] flex items-center justify-center mb-8">
@@ -72,7 +82,7 @@ export function BackingTransparencySection() {
                 {feature.description}
               </p>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 

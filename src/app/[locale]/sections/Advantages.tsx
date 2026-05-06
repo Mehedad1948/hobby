@@ -38,7 +38,7 @@ export default function Advantages() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                            className="bg-gold-fade-reverse p-6 rounded-md shadow-lg relative"
                         >
                              <CustomSvgLine width={150} height={40}
                               className="absolute translate-y-1 top-full -scale-x-100 -scale-y-100 left-3/4 lg:block hidden" /> 
@@ -54,7 +54,7 @@ export default function Advantages() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                            className="bg-gold-fade lg:bg-gold-fade-reverse p-6 rounded-md shadow-lg relative"
                         >
                              <CustomSvgLine height={70}  className="absolute -translate-y-1 -scale-x-100 bottom-full left-1/2  lg:block hidden"  /> 
                             <h4 className="text-white mb-2">Data encryption</h4>
@@ -90,7 +90,7 @@ export default function Advantages() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="bg-gold-fade p-6 rounded-md shadow-lg relative"
+                            className="bg-gold-fade-reverse lg:bg-gold-fade p-6 rounded-md shadow-lg relative"
                         >
                              <CustomSvgLine width={150}
                               className="absolute translate-y-1 top-full -scale-y-100 right-3/4 lg:block hidden" /> 

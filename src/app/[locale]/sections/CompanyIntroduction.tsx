@@ -42,7 +42,7 @@ export default function CompanyIntroduction() {
             </div>
 
             <Image
-              src={imageUrlHandler('image.png', '/dev-only/image.png')}
+              src={imageUrlHandler('Image.png', '/dev-only/Image.png')}
               alt="Company team meeting"
               fill
               className="object-cover"

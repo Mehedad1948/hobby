@@ -71,7 +71,7 @@ export default function Advantages() {
 
                         {/* Image Placeholder */}
                         <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center rounded-full">
-                            <GlowBackground blur="150px" aspectRatio={'1 / 2'} width="30%" className="   " />
+                            <GlowBackground blur="150px" aspectRatio={'1 / 2'} width="50%" className="   " />
                             <Image
                                 src={imageUrlHandler('Object.png',`/dev-only/Object.png`) }
                                 alt="Robotic hand with gold"

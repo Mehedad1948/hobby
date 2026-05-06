@@ -14,7 +14,7 @@ export default function Header() {
           <div className="w-8 h-8 bg-secondary-main mask mask-hexagon flex items-center justify-center">
             <span className="text-primary-darker text-xs font-bold">M</span>
           </div>
-          <span className="text-white font-bold text-xl tracking-wide">
+          <span className="text-white font-bold text-xl tracking-wide md:block hidden">
             GLDON
           </span>
         </Link>

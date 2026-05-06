@@ -57,7 +57,7 @@ export function BackingTransparencySection() {
               key={index} 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
               className="flex flex-col items-center text-center px-6"
             >

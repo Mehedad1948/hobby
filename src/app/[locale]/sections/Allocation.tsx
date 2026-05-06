@@ -30,7 +30,7 @@ export default function Allocation() {
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
             className="relative p-6 rounded-2xl border-primary-main border bg-primary/10 gap-8 flex items-center justify-between text-left overflow-hidden h-40"
           >
@@ -55,7 +55,7 @@ export default function Allocation() {
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="relative p-6 rounded-2xl border-primary-main border bg-primary/10 flex gap-8 items-center justify-between text-left h-40"
           >
@@ -79,7 +79,7 @@ export default function Allocation() {
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="relative p-6 rounded-2xl border-primary-main border bg-primary/10 flex items-center justify-between text-left h-40 overflow-hidden"
           >

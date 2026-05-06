@@ -58,7 +58,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <Advantages />
       </div>
 
-      <LazyLoadWrapper>
+      {/* <LazyLoadWrapper> */}
 
         <BackingTransparencySection />
 
@@ -86,7 +86,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <CompanyIntroduction />
 
         <FAQSection />
-      </LazyLoadWrapper>
+      {/* </LazyLoadWrapper> */}
     </section>
   );
 }

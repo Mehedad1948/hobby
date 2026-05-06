@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui';
 import Container from '@/components/ui/container';
 import Link from 'next/link';
+import Navbar from './Navbar';
 
 export default function Header() {
   return (
@@ -19,36 +20,11 @@ export default function Header() {
         </Link>
 
         {/* Middle: Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="/"
-            className="text-secondary-main font-medium hover:text-secondary-lighter transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            About us
-          </Link>
-          <Link
-            href="/developer"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            Developer access
-          </Link>
-          <Link
-            href="/transparency"
-            className="text-white hover:text-gray-300 transition-colors"
-          >
-            Transparency
-          </Link>
-        </nav>
+        <Navbar />
 
         {/* Right: Actions */}
         <div>
-          <Button  variant={'secondary'} className="">
+          <Button variant={'secondary'} className="">
             Sign in
           </Button>
         </div>

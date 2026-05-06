@@ -16,6 +16,7 @@ import FAQSection from "./sections/FAQ";
 import Image from "next/image";
 import { imageUrlHandler } from "@/lib/helpers/image-url-handler";
 import Container from "@/components/ui/container";
+import LazyLoadWrapper from "@/components/widgets/lazy-load-wrapper/LazyLoadWrapper";
 
 const slides = [
   <div key="1" className="w-full h-full flex flex-col items-center justify-center p-12 bg-gradient-to-br from-blue-50 to-white">
@@ -57,30 +58,35 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <Advantages />
       </div>
 
-      <BackingTransparencySection />
+      <LazyLoadWrapper>
 
-      {/* <FeatureSlider slides={slides} /> */}
+        <BackingTransparencySection />
 
-      <Compliance />
+        {/* <FeatureSlider slides={slides} /> */}
 
-      <div className="w-full bg-background">
 
-        <Allocation />
-        <Container className="w-full flex items-center justify-center relative overflow-visible">
-          <Image
-            className="absolute  w-full"
-            width={700}
-            height={50}
-            alt="divide"
-            src={imageUrlHandler('divider.png', '/dev-only/divider.png')}
-          />
-        </Container>
-        <MoreAboutSection />
-      </div>
 
-      <CompanyIntroduction />
+        <Compliance />
 
-      <FAQSection />
+        <div className="w-full bg-background">
+
+          <Allocation />
+          <Container className="w-full flex items-center justify-center relative overflow-visible">
+            <Image
+              className="absolute  w-full"
+              width={700}
+              height={50}
+              alt="divide"
+              src={imageUrlHandler('divider.png', '/dev-only/divider.png')}
+            />
+          </Container>
+          <MoreAboutSection />
+        </div>
+
+        <CompanyIntroduction />
+
+        <FAQSection />
+      </LazyLoadWrapper>
     </section>
   );
 }

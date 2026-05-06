@@ -1,3 +1,4 @@
+import { CustomSvgLine } from "@/components/ui/CustomSvgLine";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { GoldenTag } from "@/components/ui/golden-tag";
 import Image from "next/image";
@@ -28,7 +29,9 @@ export default function Advantages() {
                     {/* Left Features */}
                     <div className="flex flex-col space-y-8 lg:space-y-32 order-2 lg:order-1 z-10">
                         {/* Feature 1 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg">
+                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                             <CustomSvgLine width={150} height={40}
+                              className="absolute translate-y-1 top-full -scale-x-100 -scale-y-100 left-3/4 lg:block hidden" /> 
                             <h4 className="text-white mb-2">Currency conversion</h4>
                             <p className=" text-base leading-relaxed">
                                 Exportable reports for tax and accounting purposes.
@@ -36,7 +39,8 @@ export default function Advantages() {
                         </div>
 
                         {/* Feature 2 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg">
+                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                             <CustomSvgLine height={70}  className="absolute -translate-y-1 -scale-x-100 bottom-full left-1/2  lg:block hidden"  /> 
                             <h4 className="text-white mb-2">Data encryption</h4>
                             <p className=" text-base leading-relaxed">
                                 Visual dashboards for trade performance.
@@ -51,7 +55,7 @@ export default function Advantages() {
 
                         {/* Image Placeholder */}
                         <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center rounded-full">
-                            <GlowBackground blur="150px" aspectRatio={'1 / 2'}  width="30%" className="   "  />
+                            <GlowBackground blur="150px" aspectRatio={'1 / 2'} width="30%" className="   " />
                             <Image
                                 src={`/dev-only/Object.png`}
                                 alt="Robotic hand with gold"
@@ -65,7 +69,9 @@ export default function Advantages() {
                     {/* Right Features */}
                     <div className="flex flex-col space-y-8 lg:space-y-32 order-3 z-10">
                         {/* Feature 3 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg">
+                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                             <CustomSvgLine width={150}
+                              className="absolute translate-y-1 top-full -scale-y-100 right-3/4 lg:block hidden" /> 
                             <h4 className="text-white mb-2">Cold wallet storage</h4>
                             <p className=" text-base leading-relaxed">
                                 Regular updates on crypto trends and platform features.
@@ -73,7 +79,9 @@ export default function Advantages() {
                         </div>
 
                         {/* Feature 4 */}
-                        <div className="bg-gold-fade p-6 rounded-md shadow-lg">
+                        <div className="bg-gold-fade p-6 rounded-md shadow-lg relative">
+                           <CustomSvgLine  className="absolute -translate-y-1  bottom-full right-1/2  lg:block hidden"  /> 
+
                             <h4 className="text-white mb-2">Transfer crypto & data</h4>
                             <p className=" text-base leading-relaxed">
                                 Guides for beginners on crypto basics and trading.

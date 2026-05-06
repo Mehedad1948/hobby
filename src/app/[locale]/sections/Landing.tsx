@@ -7,10 +7,10 @@ export default function Landing() {
         <section className="bg-black w-full relative flex flex-col-reverse md:flex-row items-center overflow-hidden">
             <Container className="w-full relative z-10 py-2 lg:py-28">
                 <div className="flex w-full max-w-2xl flex-col  md:pt-16 space-y-6 pr-4 lg:pr-12">
-                    <h1 className="text-white text-center md:text-left">
+                    <h1 className="text-white max-w-xs md:max-w-xl mx-auto md:mx-0 text-center md:text-left">
                         <span className="text-secondary">Real Gold</span> <br className="hidden" />
-                        Digitally <br />
-                        Native Fully <br />
+                        Digitally 
+                        Native Fully 
                         Verifiable
                     </h1>
 

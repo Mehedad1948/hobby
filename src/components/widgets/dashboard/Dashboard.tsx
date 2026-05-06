@@ -21,7 +21,7 @@ export async function Dashboard({ locale }: { locale: string }) {
 
   return (
     <section className="container py-16">
-      <div className="bg-orange-100 p-6 text-center">{(Math.random() * 1000).toFixed(0)}</div>
+      {/* <div className="bg-orange-100 p-6 text-center">{(Math.random() * 1000).toFixed(0)}</div> */}
       <div className="flex flex-col items-center justify-center gap-6">
         <Balancer
           as="h1"
@@ -71,10 +71,6 @@ export async function Dashboard({ locale }: { locale: string }) {
           </Link>
         </Button>
         <Button variant="outline" size="sm" asChild>
-          <Link href="/test">
-            <GitBranch className="h-4 w-4" aria-hidden="true" />
-            test
-          </Link>
         </Button>
       </div>
     </section>

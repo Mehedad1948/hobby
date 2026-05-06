@@ -29,15 +29,15 @@ import GlobalLoader from "@/components/ui/loading-indicator";
 import { pick } from "@/lib/helpers";
 import Footer from "@/components/layouts/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"]
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"]
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"]
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"]
+// });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -75,7 +75,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen w-full flex-col antialiased`}
+        className={`flex min-h-screen w-full flex-col antialiased`}
       >
         <GlobalLoader />
         <Providers messages={pick(messages, 'common', 'ui', 'error')} locale={locale}>

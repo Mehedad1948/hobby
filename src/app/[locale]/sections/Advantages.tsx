@@ -1,6 +1,7 @@
 import { CustomSvgLine } from "@/components/ui/CustomSvgLine";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { GoldenTag } from "@/components/ui/golden-tag";
+import { imageUrlHandler } from "@/lib/helpers/image-url-handler";
 import Image from "next/image";
 
 export default function Advantages() {
@@ -57,7 +58,7 @@ export default function Advantages() {
                         <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center rounded-full">
                             <GlowBackground blur="150px" aspectRatio={'1 / 2'} width="30%" className="   " />
                             <Image
-                                src={`/dev-only/Object.png`}
+                                src={imageUrlHandler('Object.png',`/dev-only/Object.png`) }
                                 alt="Robotic hand with gold"
                                 width={400}
                                 height={400}

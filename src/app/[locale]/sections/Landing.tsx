@@ -1,4 +1,5 @@
 import Container from "@/components/ui/container";
+import { imageUrlHandler } from "@/lib/helpers/image-url-handler";
 import Image from "next/image";
 
 export default function Landing() {
@@ -31,12 +32,12 @@ export default function Landing() {
             */}
             <div className="relative w-full md:absolute md:top-0 md:right-0 md:bottom-0 md:w-1/2 flex items-center justify-end z-0">
                 <Image
-                    src={`/dev-only/Section.png`}
+                    src={imageUrlHandler('Section.png', `/dev-only/Section.png`)}
                     alt="Robotic hand with gold"
                     width={800}
                     height={800}
                     // Use object-cover if you want the image to fill the space, or object-right to align it right
-                    className="w-full h-full object-contain md:object-right" 
+                    className="w-full h-full object-contain md:object-right"
                 />
             </div>
         </section>

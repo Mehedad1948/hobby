@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Left Column: Brand & Description */}
           <div className="lg:col-span-6 flex flex-col items-start">
             {/* Logo Placeholder (Replace with your actual image/svg) */}
@@ -29,13 +29,11 @@ export default function Footer() {
                 <circle cx="26" cy="22" r="3" fill="currentColor" />
               </svg>
             </div>
-            
+
             <p className="text-gray-600 mb-8 max-w-sm leading-relaxed text-sm">
-              The starting point for your next project with Minimal UI Kit, built
-              on the newest version of Material-UI ©, ready to be customized to
-              your style.
+              GLDON is a gold-backed digital trading platform, built for transparent, secure, and efficient transactions, empowering users to trade and manage gold assets with confidence.
             </p>
-            
+
             <div className="flex items-center gap-4">
               <Link href="#" className="text-secondary-main hover:opacity-80 transition-opacity">
                 <Facebook size={20} strokeWidth={2} />

@@ -10,29 +10,30 @@ const faqs = [
     {
         value: "item-2",
         question: "How is the gold reserve verified?",
-        answer: "Our gold reserves are regularly audited by independent third-party firms. The audit reports are published transparently on our platform for all token holders to verify.",
+        answer: "The gold backing GLDON is independently verified through regular third-party audits and secure custody reports. Each reserve update is documented and made accessible to ensure that every token is backed by real, physical gold held in trusted vaults.",
     },
     {
         value: "item-3",
         question: "Is the token redeemable for physical gold?",
-        answer: "Yes, eligible token holders who pass the necessary compliance checks can redeem their tokens for physical gold, subject to minimum redemption quantities and standard delivery fees.",
+        answer: "Yes. GLDON is designed to be redeemable for physical gold, subject to minimum thresholds and verification requirements. The redemption process ensures that token holders can convert their digital assets into allocated gold in a secure and compliant manner.",
     },
     {
         value: "item-4",
         question: "Who can participate in the platform?",
-        answer: "Participation is open to individuals and institutions who successfully complete our KYC/AML onboarding process and meet the regulatory requirements of their jurisdiction.",
+        answer: "The platform is open to individuals and institutions who meet the required compliance standards. Users may need to complete identity verification depending on their region and level of participation.",
     },
     {
         value: "item-5",
         question: "Why is a whitelist required?",
-        answer: "A whitelist ensures that all participants have passed our compliance checks (KYC/AML), maintaining the integrity and regulatory compliance of the entire platform.",
+        answer: "Whitelist procedures are in place to ensure regulatory compliance and platform security. They help prevent unauthorized access, reduce risk, and ensure that all participants meet legal and operational requirements.",
     },
     {
         value: "item-6",
         question: "How is transparency ensured?",
-        answer: "Transparency is ensured through blockchain immutability, regular third-party reserve audits, and real-time tracking dashboards available to all verified users.",
-    },
+        answer: "Transparency is maintained through a combination of audit reports, on-chain data, and regular disclosures. Users can verify key information related to token supply, reserves, and transactions at any time.",
+    }
 ];
+
 
 export default function FAQSection() {
     return (

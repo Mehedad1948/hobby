@@ -13,6 +13,9 @@ import Allocation from "./sections/Allocation";
 import MoreAboutSection from "./sections/MoreAbout";
 import CompanyIntroduction from "./sections/CompanyIntroduction";
 import FAQSection from "./sections/FAQ";
+import Image from "next/image";
+import { imageUrlHandler } from "@/lib/helpers/image-url-handler";
+import Container from "@/components/ui/container";
 
 const slides = [
   <div key="1" className="w-full h-full flex flex-col items-center justify-center p-12 bg-gradient-to-br from-blue-50 to-white">
@@ -49,9 +52,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <section className="flex flex-col items-center justify-center ">
       <div className="bg-black w-full">
 
-      <Landing />
+        <Landing />
 
-      <Advantages />
+        <Advantages />
       </div>
 
       <BackingTransparencySection />
@@ -60,9 +63,20 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       <Compliance />
 
-      <Allocation />
+      <div className="w-full bg-background">
 
-      <MoreAboutSection />
+        <Allocation />
+        <Container className="w-full flex items-center justify-center relative overflow-visible">
+          <Image
+            className="absolute  w-full"
+            width={700}
+            height={50}
+            alt="divide"
+            src={imageUrlHandler('divider.png', '/dev-only/divider.png')}
+          />
+        </Container>
+        <MoreAboutSection />
+      </div>
 
       <CompanyIntroduction />
 

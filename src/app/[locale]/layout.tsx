@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , Public_Sans} from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -29,10 +29,10 @@ import GlobalLoader from "@/components/ui/loading-indicator";
 import { pick } from "@/lib/helpers";
 import Footer from "@/components/layouts/footer/Footer";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"]
-// });
+const publicSans = Public_Sans({
+  variable: "--font-geist-sans",
+  subsets: ["latin"]
+});
 
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",
@@ -75,7 +75,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`flex min-h-screen w-full flex-col antialiased`}
+        className={`${publicSans.variable} ${publicSans.className} flex min-h-screen w-full flex-col antialiased`}
       >
         <GlobalLoader />
         <Providers messages={pick(messages, 'common', 'ui', 'error')} locale={locale}>

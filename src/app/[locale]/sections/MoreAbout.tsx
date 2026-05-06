@@ -1,5 +1,7 @@
 import { GoldenTag } from '@/components/ui/golden-tag';
+import { imageUrlHandler } from '@/lib/helpers/image-url-handler';
 import { Coins, Link as LinkIcon, Users } from 'lucide-react'; // Placeholder icons
+import Image from 'next/image';
 
 export default function MoreAboutSection() {
   return (
@@ -27,17 +29,14 @@ export default function MoreAboutSection() {
           {/* Left: Vault Image */}
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
             {/* Replace src with your actual vault image path */}
-            <div className="absolute inset-0 bg-primary-dark/50 flex items-center justify-center border border-slate-800 rounded-2xl">
-                <span className="text-secondary-main/50">[Vault Image Placeholder]</span>
-            </div>
-            {/* Example of how to use next/image once you have the asset:
-            <Image 
-              src="/images/vault.png" 
+           
+            <Image
+              src={imageUrlHandler('7bdb1f33-2b8f-4052-9c91-9421d7aa8f6d 1.png', '/dev-only/7bdb1f33-2b8f-4052-9c91-9421d7aa8f6d 1.png')} 
               alt="GLDON Gold Vault" 
               fill 
-              className="object-cover"
+              className="object-contain"
             /> 
-            */}
+           
           </div>
 
           {/* Right: Feature List */}

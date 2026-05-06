@@ -47,9 +47,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <section className="flex flex-col items-center justify-center ">
+      <div className="bg-black w-full">
+
       <Landing />
 
       <Advantages />
+      </div>
 
       <BackingTransparencySection />
 

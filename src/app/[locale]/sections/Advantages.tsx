@@ -1,3 +1,4 @@
+import { GlowBackground } from "@/components/ui/GlowBackground";
 import { GoldenTag } from "@/components/ui/golden-tag";
 import Image from "next/image";
 
@@ -49,11 +50,15 @@ export default function Advantages() {
                         <div className="absolute w-64 h-64 lg:w-96 lg:h-96 bg-gold-fade/30 rounded-full blur-[100px]"></div>
 
                         {/* Image Placeholder */}
-                        <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center border-2 border-dashed border-secondary-main/50 rounded-full">
-                            <span className="text-secondary-main/70 text-sm font-mono text-center px-4">
-                                [ REPLACE WITH YOUR GLOWING COIN IMAGE ] <br />
-                                {`<Image src="/coin.png" alt="Coin" fill className="object-contain" />`}
-                            </span>
+                        <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center rounded-full">
+                            <GlowBackground blur="150px" aspectRatio={'1 / 2'}  width="30%" className="   "  />
+                            <Image
+                                src={`/dev-only/Object.png`}
+                                alt="Robotic hand with gold"
+                                width={400}
+                                height={400}
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                     </div>
 

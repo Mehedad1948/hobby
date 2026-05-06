@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <Container className='fixed z-30 top-8 left-1/2 -translate-x-1/2'>
+    <Container className='fixed z-30 top-4 md:top-8 left-1/2 -translate-x-1/2'>
       <header className="flex  w-full items-center justify-between bg-primary-dark opacity-90 backdrop-blur-xs px-6 py-3 rounded-[5rem] ">
 
         {/* Left: Logo */}

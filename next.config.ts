@@ -5,6 +5,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 import type { RuleSetRule } from "webpack";
 
 const withNextIntl = createNextIntlPlugin({
+
   experimental: {
     messages: {
       path: "./messages",
@@ -23,6 +24,16 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   cacheComponents: true,
   htmlLimitedBots: /.*/,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+        port: '',
+        pathname: '**',
+      },
+    ]
+  },
   turbopack: {
     rules: {
       "*.svg": {

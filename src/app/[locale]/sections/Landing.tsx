@@ -1,42 +1,44 @@
 import Container from "@/components/ui/container";
+import Image from "next/image";
 
 export default function Landing() {
     return (
+        <section className="bg-black w-full relative flex flex-col md:flex-row items-center overflow-hidden">
+            {/* 
+              Container holds only the text. 
+              It maintains your standard margins/paddings on the left.
+            */}
+            <Container className="w-full relative z-10 py-16 lg:py-28">
+                <div className="flex w-full max-w-2xl flex-col pt-12 md:pt-16 space-y-6 pr-4 lg:pr-12">
+                    <h1 className="text-white">
+                        <span className="text-secondary">Real Gold</span> <br className="hidden" />
+                        Digitally <br />
+                        Native Fully <br />
+                        Verifiable
+                    </h1>
 
-        <section className="bg-black w-full  flex items-center">
-            <Container>
-                <div className="flex  gap-12 items-center py-16 lg:py-28">
-
-                    {/* Left Column: Text Content */}
-                    <div className="flex max-w-2xl w-full flex-col space-y-6 z-10">
-                        <h1 className="  text-white">
-                            <span className="text-secondary">Real Gold</span> <br className="hidden " />
-                            Digitally <br />
-                            Native Fully <br />
-                            Verifiable
-                        </h1>
-
-                        <p className=" text-white text-xl">
-                            A digital token backed by physical gold stored in a high-security vault.
-                            Fast, secure, and easy to trade, bypassing traditional barriers to entry
-                            in the global gold market.
-                        </p>
-                    </div>
-
-                    {/* Right Column: Image Area */}
-                    <div className="relative w-full  flex items-center justify-center">
-                        {/* 
-                          REPLACE THIS DIV WITH YOUR IMAGE TAG 
-                          Example:
-                          <img src="/your-image.png" alt="Robotic hand with gold" className="w-full h-auto object-cover" />
-                        */}
-                        <div className="w-full h-full border-2 border-dashed border-gray-700 rounded-xl flex items-center justify-center bg-gray-900/50">
-                            <span className="text-gray-500 font-medium">Put your image here</span>
-                        </div>
-                    </div>
-
+                    <p className="text-white text-xl">
+                        A digital token backed by physical gold stored in a high-security vault.
+                        Fast, secure, and easy to trade, bypassing traditional barriers to entry
+                        in the global gold market.
+                    </p>
                 </div>
             </Container>
+
+            {/* 
+              Right Column: Image Area 
+              Absolutely positioned on desktop to snap to the right edge of the viewport.
+            */}
+            <div className="relative w-full md:absolute md:top-0 md:right-0 md:bottom-0 md:w-1/2 flex items-center justify-end z-0">
+                <Image
+                    src={`/dev-only/Section.png`}
+                    alt="Robotic hand with gold"
+                    width={800}
+                    height={800}
+                    // Use object-cover if you want the image to fill the space, or object-right to align it right
+                    className="w-full h-full object-contain md:object-right" 
+                />
+            </div>
         </section>
     );
 }
